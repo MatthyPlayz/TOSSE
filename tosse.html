@@ -1,0 +1,58 @@
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
+<font face="Raleway">
+<div align="center">
+<h1>TOSSE</h1>
+<span id="roller" style="display: none;">
+  <button onclick="rolldf()">Roll a 4 sided die</button>
+  <br />
+  <button onclick="rollds()">Roll a 6 sided die</button>
+  <br />
+  <button onclick="rolldt()">Roll a 10 sided die</button>
+  <br />
+  <button onclick="rolldtw()">Roll a 20 sided die</button>
+  </span>
+<script type="text/javascript" charset="utf-8">
+function search()
+{   query = a.value
+    url ='http://www.google.com/search?q=' + query;
+    window.open(url,'_blank');
+  if(a.value == "Roll a die" || "ROLL A DIE" || "roll a die" || "Roll a dice" || "roll a dice" || "ROLL A DICE") {
+    rollADie()
+  }
+}
+function rollADie() {
+  toggleViewOf(roller)
+}
+function hide(which) {
+  which.style.display="none"
+}
+function toggleViewOf(which){
+if (!document.getElementById)
+return
+if (which.style.display=="block")
+which.style.display="none"
+else
+which.style.display="block"
+}
+function rolldf() {
+  document.write(Math.floor(Math.random() * 4))
+}
+function rollds() {
+  document.write(Math.floor(Math.random() * 6))
+}
+function rolldt() {
+  document.write(Math.floor(Math.random() * 10))
+}
+function rolldtw() {
+  document.write(Math.floor(Math.random() * 20))
+}
+</script>
+<div align="center">
+<style>
+#plex { position: relative; top: -18px; }
+</style>
+<br />
+<input type="text" id="a" value="Search" onchange="query = this.value;" />
+<input type="submit" value="Search" onclick="search();" />
+  </link>
+</div>
